@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+try {
+  Doctrine_Manager::connection()->beginTransaction();
+  
+  $0
+  
+  Doctrine_Manager::connection()->commit();
+} catch (Exception \$e) {
+  Doctrine_Manager::connection()->rollback();
+  throw \$e;
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>trans</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

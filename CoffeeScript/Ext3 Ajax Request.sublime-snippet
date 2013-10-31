@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+Ext.Msg.wait '$1'
+Ext.Ajax.request
+  url: '$2'
+  params: 
+    $3
+  success: (r) ->
+    Ext.Msg.hide()
+    resp = Ext.decode(r.responseText)
+    $4
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ajaxrequest</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.coffee</scope>
+</snippet>
